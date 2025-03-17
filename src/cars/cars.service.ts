@@ -8,22 +8,16 @@ import { CreateCarDto, UpdateCarDto } from './dto';
 export class CarsService {
   
   private cars: Car[] = [
-    {
-      id  :   uuid(),
-      brand: 'Toyota',
-      model: 'Corolla'
-    },
-    {
-      id    : uuid(),
-      brand : 'Honda',
-      model : 'Civic'
-    },
-    {
-      id    : uuid(),
-      brand : 'Jeep',
-      model : 'Cherokee'
-    },
+    // {
+    //   id  :   uuid(),
+    //   brand: 'Toyota',
+    //   model: 'Corolla'
+    // },
   ]
+
+  fillCarsWithSeedData(cars: Car[]) {
+    this.cars = cars;
+  }
 
   findAll() {
     return this.cars;

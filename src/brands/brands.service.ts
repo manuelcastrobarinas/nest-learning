@@ -8,12 +8,16 @@ import { v4 as uuid } from 'uuid';
 export class BrandsService {
 
   private brands:Brand[] = [
-    {
-      id: uuid(),
-      name: 'Toyota',
-      createdAt: new Date().getTime()
-    }
+    // {
+    //   id: uuid(),
+    //   name: 'Toyota',
+    //   createdAt: new Date().getTime()
+    // }
   ];
+
+  fillBrandsWithSeedData(brands: Brand[]) {
+    this.brands = brands;
+  }
 
   create(createBrandDto: CreateBrandDto) {
     const brand:Brand = {
